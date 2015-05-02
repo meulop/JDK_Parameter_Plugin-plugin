@@ -148,6 +148,11 @@ public class JavaParameterDefinition extends ParameterDefinition {
         return new JavaParameterValue(name, getDescription(), selectedJDK);
     }
 
+    @Override
+    public ParameterValue getDefaultParameterValue() {
+        return new JavaParameterValue(getName(),getDescription(),defaultJDK);
+    }
+
     @Extension
     public static class DescriptorImpl extends ParameterDescriptor {
 
